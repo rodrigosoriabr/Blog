@@ -1,0 +1,8 @@
+*.icloud
+*.v2
+*.idea
+*.bin
+*/bin
+*/obj
+*.vs
+*.suo
