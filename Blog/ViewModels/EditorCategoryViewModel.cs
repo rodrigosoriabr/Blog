@@ -8,9 +8,8 @@ namespace Blog.ViewModels;
 public class EditorCategoryViewModel
 {
     [Required]
-    [StringLength(maximumLength: 40, MinimumLength = 3)]
+    [StringLength(40, MinimumLength = 3)]
     public required string Name { get; set; }
-    
-    [Required]
-    public required string Slug { get; set; }
+
+    [Required] public required string Slug { get; set; }
 }

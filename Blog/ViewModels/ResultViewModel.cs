@@ -2,10 +2,6 @@ namespace Blog.ViewModels;
 
 public class ResultViewModel<T>
 {
-    public T Data { get; private set; }
-
-    public List<string> Errors { get; set; } = new();
-
     public ResultViewModel(T data)
     {
         Data = data;
@@ -26,4 +22,8 @@ public class ResultViewModel<T>
         Data = data;
         Errors = errors;
     }
+
+    public T Data { get; private set; }
+
+    public List<string> Errors { get; set; } = new();
 }
