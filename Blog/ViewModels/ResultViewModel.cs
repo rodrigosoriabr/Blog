@@ -23,7 +23,7 @@ public class ResultViewModel<T>
         Errors = errors;
     }
 
-    public T Data { get; private set; }
+    public T? Data { get; private set; }
 
-    public List<string> Errors { get; set; } = new();
+    private List<string> Errors { get; } = [];
 }

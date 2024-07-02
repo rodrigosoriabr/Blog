@@ -1,3 +1,4 @@
+using Blog.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers;
@@ -6,7 +7,10 @@ namespace Blog.Controllers;
 [Route("")]
 public class HomeController : ControllerBase
 {
-    [HttpGet("health-check")]
+    // ApiKey is a way to give access to your Api without running by the login process
+    // Be careful with this approach as the ApiKey is static and might be harmful
+    [ApiKey]
+    [HttpGet("")]
     public IActionResult Get()
     {
         return Ok();
