@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Blog.ViewModels;
+namespace Blog.ViewModels.Categories;
 
 // Editor prefix is a convention to use when the model are create and edit with same props;
 // Add the required "annotation" to force the prop be required; 
