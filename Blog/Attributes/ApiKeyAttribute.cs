@@ -11,7 +11,7 @@ public class ApiKeyAttribute : Attribute, IAsyncActionFilter
         ActionExecutionDelegate next)
     {
         if (!context.HttpContext.Request.Query.TryGetValue(
-                Configuration.ApiKeyName, out var extractedApiKey))
+                Configuration.ApiKeyName!, out var extractedApiKey))
         {
             context.Result = new ContentResult
             {
@@ -22,7 +22,7 @@ public class ApiKeyAttribute : Attribute, IAsyncActionFilter
             return;
         }
 
-        if (!Configuration.ApiKey.Equals(extractedApiKey))
+        if (!Configuration.ApiKey!.Equals(extractedApiKey))
         {
             context.Result = new ContentResult
             {

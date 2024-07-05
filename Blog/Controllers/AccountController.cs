@@ -73,7 +73,7 @@ public class AccountController : ControllerBase
 
         if (user == null) return StatusCode(401, new ResultViewModel<string>("User or password is invalid"));
 
-        if (!PasswordHasher.Verify(user.PasswordHash, model.Password))
+        if (!PasswordHasher.Verify(user.PasswordHash!, model.Password))
             return StatusCode(401, new ResultViewModel<string>("User or password is invalid"));
 
         try

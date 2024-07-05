@@ -9,11 +9,11 @@ public static class RoleClaimsExtension
     {
         var result = new List<Claim>
         {
-            new(ClaimTypes.Name, user.Email)
+            new(ClaimTypes.Name, user.Email!)
         };
 
         result.AddRange(
-            user.Roles.Select(x => new Claim(ClaimTypes.Role, x.Slug))
+            user.Roles!.Select(x => new Claim(ClaimTypes.Role, x.Slug))
         );
 
         return result;

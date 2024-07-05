@@ -9,8 +9,8 @@ namespace Blog.Models
         }
         
         public int Id { get; private set; }
-        public string Name { get; set; }
-        public string Slug { get; set; }
-        public IList<Post> Posts { get; private set; }
+        public string Name { get; set; } = string.Empty;
+        public string Slug { get; set; } = string.Empty;
+        public IList<Post>? Posts { get; private set; } 
     }
 }
